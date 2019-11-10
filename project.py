@@ -82,7 +82,7 @@ class MainWindow(QWidget):
         Vs=0
         ran = np.linspace(10, 20)
         
-        if 'HagenHorizontal' in self.cb.currentText():
+        if 'Hagenvertical' in self.cb.currentText():
             def HagenHorizontal(Vh,r):
                 
                 k = -P/(miu*L)
@@ -103,7 +103,7 @@ class MainWindow(QWidget):
             print("volumeric flowrate = ",Vhvol)
             print("average velocity = ",Vhaveg)
     
-        if 'Hagenvertical' in self.cb.currentText():
+        if 'HagenHorizontal' in self.cb.currentText():
             def Hagenvertical(Vv,r):
 
                 k = -rho*g/2/miu
@@ -124,7 +124,7 @@ class MainWindow(QWidget):
             print("volumeric flowrate = ",Vvvol)
             print("average velocity = ",Vvaveg)
         
-        if 'AnnulusHorizontal' in self.cb.currentText():
+        if 'AnnulusVertical' in self.cb.currentText():
             
             C1=(Vs-P/4/miu/L*(r1**2-rt**2))/np.log(r1/rt) 
             C2 = -P/4/miu/L*rt**2-C1*np.log(rt)
@@ -148,7 +148,7 @@ class MainWindow(QWidget):
             print("volumeric flowrate = ",Vanvol)
             print("average velocity = ",Vanaveg)
             
-        if 'AnnulusVertical' in self.cb.currentText():
+        if 'AnnulusHorizontal' in self.cb.currentText():
             C3=(Vs+rho*g/miu/4*(r1**2-rt**2))/np.log(r1/rt)
             C4=rho*g/miu/4*rt**2-C3*np.log(rt)
             
