@@ -48,7 +48,7 @@ def velocities(system):
         plt.plot(r,V)
         plt.ylabel('V')
         plt.xlabel('r')
-        #plt.show()
+        plt.show()
 
     elif system == "Hagenvertical":
         x = np.linspace(0,20)
@@ -62,7 +62,7 @@ def velocities(system):
         plt.plot(r,V)
         plt.ylabel('V')
         plt.xlabel('r')
-        
+        plt.show()
 
     elif system=="AnnulusHorizontal":
         ran = np.linspace(10, 20)
@@ -77,6 +77,7 @@ def velocities(system):
         plt.plot(ran, V)
         plt.ylabel('V')
         plt.xlabel('r')
+        plt.show()
         
     elif system == "AnnulusVertical":
         ran = np.linspace(10, 20)
@@ -89,6 +90,7 @@ def velocities(system):
         plt.plot(ran, V)
         plt.ylabel('V')
         plt.xlabel('r')
+        plt.show()
         
     else:
         print("your system was not found")
